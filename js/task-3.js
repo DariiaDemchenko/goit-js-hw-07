@@ -7,5 +7,5 @@ inputName.addEventListener('input', handleInput);
 function handleInput(event) {
   const updateName = event.currentTarget.value.trim();
   const output = updateName || 'Anonymous';
-  return (outputName.textContent = output);
+  outputName.textContent = output;
 }

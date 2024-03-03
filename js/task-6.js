@@ -12,12 +12,12 @@ buttonCreateEl.addEventListener('click', createBoxes);
 buttonDestroyEl.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
-  const number = inputEl.value;
+  const number = Number(inputEl.value);
   if (number < 1 || number > 100) {
     return;
   }
 
-  destroyBoxes();
+  clearBoxes();
 
   for (let i = 0; i < number; i++) {
     const box = document.createElement('div');
@@ -31,5 +31,8 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
+  clearBoxes();
+}
+function clearBoxes() {
   boxesDivEl.innerHTML = '';
 }

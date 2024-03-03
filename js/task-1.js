@@ -1,14 +1,11 @@
-`use strict`;
-const categories = document.querySelector("#categories");
-// console.dir(categories);
-const allCategories = categories.childElementCount;
-console.log(`Number of categories: ${allCategories}`);
+'use strict';
 
-const categoriesTitles = document.querySelectorAll(".item");
-// console.dir(categoriesTitles);
+const categoriesTitles = document.querySelectorAll('.item');
+console.log(`Number of categories: ${categoriesTitles.length}`);
+
 categoriesTitles.forEach(function (category) {
-  const title = category.querySelector("h2").textContent;
+  const title = category.querySelector('h2').textContent;
   console.log(`Category: ${title}`);
-  const count = category.querySelectorAll("li").length;
+  const count = category.querySelectorAll('li').length;
   console.log(`Elements: ${count}`);
 });
